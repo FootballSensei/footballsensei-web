@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using FootballSensei.Models.DTOs;
+using FootballSensei.Services.PlayerService;
+using Microsoft.AspNetCore.Mvc;
 
 namespace FootballSensei.Controllers
 {
@@ -6,16 +8,21 @@ namespace FootballSensei.Controllers
     [ApiController]
     public class PlayerController : ControllerBase
     {
+        public readonly IPlayerService _playerService;
+
         [HttpGet]
-        public IActionResult Get()
+        public async Task<IActionResult> GetAllPlayers()
         {
-            return Ok();
+            var players = await _playerService.GetAllPlayers();
+            return Ok(players);
         }
 
         [HttpPost]
-        public IActionResult Post()
+        public async Task<IActionResult> CreatePlayer(CreatePlayerDTO playerDTO)
         {
-            return Ok();
+            var players = await _playerService.CreatePlayer(playerDTO);
+            return Ok(players);
         }
+
     }
 }

@@ -1,9 +1,9 @@
-﻿using ProiectASPNET.Data;
-using ProiectASPNET.Models.Base;
+﻿using FootballSensei.Data;
+using FootballSensei.Models.Base;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 
-namespace ProiectASPNET.Repositories.GenericRepository
+namespace FootballSensei.Repositories.GenericRepository
 {
     public class GenericRepository<TEntity> : IGenericRepository<TEntity> where TEntity : class
     {

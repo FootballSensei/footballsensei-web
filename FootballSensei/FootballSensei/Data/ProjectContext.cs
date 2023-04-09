@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc.ViewEngines;
 using System.Collections.Generic;
 using System.Reflection.Emit;
 
-namespace ProiectASPNET.Data
+namespace FootballSensei.Data
 {
     public class ProjectContext : DbContext
     {

@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using FootballSensei.Models.DTOs;
+using FootballSensei.Services.TeamService;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FootballSensei.Controllers
@@ -7,16 +9,20 @@ namespace FootballSensei.Controllers
     [ApiController]
     public class TeamController : ControllerBase
     {
+        public readonly ITeamService _teamService;
+
         [HttpGet]
-        public IActionResult Get()
+        public async Task<IActionResult> GetAllTeams()
         {
-            return Ok();
+            var teams = await _teamService.GetAllTeams();
+            return Ok(teams);
         }
 
         [HttpPost]
-        public IActionResult Post()
+        public async Task<IActionResult> CreateTeam(CreateTeamDTO teamDTO)
         {
-            return Ok();
+            var teams = await _teamService.CreateTeam(teamDTO);
+            return Ok(teams);
         }
     }
 }

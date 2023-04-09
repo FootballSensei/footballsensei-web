@@ -1,5 +1,5 @@
 ﻿using FootballSensei.Models;
-using ProiectASPNET.Repositories.GenericRepository;
+using FootballSensei.Repositories.GenericRepository;
 
 namespace FootballSensei.Repositories.PlayerRepository
 {

@@ -1,6 +1,6 @@
-﻿using ProiectASPNET.Models.Base;
+﻿using FootballSensei.Models.Base;
 
-namespace ProiectASPNET.Repositories.GenericRepository
+namespace FootballSensei.Repositories.GenericRepository
 {
     public interface IGenericRepository<TEntity> where TEntity : class
     {

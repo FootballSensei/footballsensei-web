@@ -1,6 +1,6 @@
 ﻿using FootballSensei.Models;
-using ProiectASPNET.Data;
-using ProiectASPNET.Repositories.GenericRepository;
+using FootballSensei.Data;
+using FootballSensei.Repositories.GenericRepository;
 
 namespace FootballSensei.Repositories.TeamRepository
 {
