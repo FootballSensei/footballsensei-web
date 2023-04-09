@@ -15,8 +15,5 @@ namespace FootballSensei.Models
         public int? AwayGoals { get; set; }
         public int Round { get; set; }
         public string RefereeName { get; set; }
-
-
-
     }
 }

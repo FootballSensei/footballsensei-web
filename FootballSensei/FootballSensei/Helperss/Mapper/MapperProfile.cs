@@ -15,7 +15,10 @@ namespace FootballSensei.Helpers.Mapper
             CreateMap<Team, TeamDTO>();
             CreateMap<Player, PlayerDTO>();
             CreateMap<PlayerDTO, Player>();
-
+            CreateMap<MatchDTO, Match>();
+            CreateMap<Match, MatchDTO>();
+            CreateMap<CreateMatchDTO, MatchDTO>();
+            CreateMap<CreateMatchDTO, Match>();
         }
     }
 }

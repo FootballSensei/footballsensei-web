@@ -10,6 +10,11 @@ namespace FootballSensei.Controllers
     {
         public readonly IPlayerService _playerService;
 
+        public PlayerController(IPlayerService playerService)
+        {
+            _playerService = playerService;
+        }
+
         [HttpGet]
         public async Task<IActionResult> GetAllPlayers()
         {
@@ -23,6 +28,7 @@ namespace FootballSensei.Controllers
             var players = await _playerService.CreatePlayer(playerDTO);
             return Ok(players);
         }
+        
 
     }
 }

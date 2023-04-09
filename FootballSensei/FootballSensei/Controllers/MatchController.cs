@@ -11,6 +11,11 @@ namespace FootballSensei.Controllers
     {
         public readonly IMatchService _matchService;
 
+        public MatchController(IMatchService matchService)
+        {
+            _matchService = matchService;
+        }
+
         [HttpGet]
         public async Task<IActionResult> GetAllMatches()
         {

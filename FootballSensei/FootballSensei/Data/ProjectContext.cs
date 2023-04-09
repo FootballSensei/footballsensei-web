@@ -15,6 +15,7 @@ namespace FootballSensei.Data
 
         public ProjectContext(DbContextOptions<ProjectContext> options) : base(options)
         {
+
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -24,21 +25,9 @@ namespace FootballSensei.Data
             modelBuilder.Entity<Team>()
                 .HasMany(t => t.Players)
                 .WithOne(p => p.Team)
-                .HasForeignKey(p => p.TeamId);
-            
-            //one
+                .HasForeignKey(p => p.TeamId)
+                .OnDelete(DeleteBehavior.Cascade);
 
-            //one match has 1 home team
-            modelBuilder.Entity<Match>()
-                .HasOne(m => m.HomeTeam)
-                .WithMany(t => t.HomeMatches)
-                .HasForeignKey(m => m.HomeTeamId);
-
-            //one match has 1 away team
-            modelBuilder.Entity<Match>()
-                .HasOne(m => m.AwayTeam)
-                .WithMany(t => t.AwayMatches)
-                .HasForeignKey(m => m.AwayTeamId);
         }
 
     }

@@ -28,11 +28,10 @@ namespace FootballSensei.Services.TeamService
 
         public async Task<List<TeamDTO>> GetAllTeams()
         {
-            
-            var teams = await _teamRepository.GetAllAsync();
+
+            var teams = await _teamRepository.GetAllWithTeamsAsync();
             var teamDTOs = _mapper.Map<List<TeamDTO>>(teams);
             return teamDTOs;
-            
         }
 
     }

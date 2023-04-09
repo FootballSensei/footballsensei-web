@@ -11,6 +11,11 @@ namespace FootballSensei.Controllers
     {
         public readonly ITeamService _teamService;
 
+        public TeamController(ITeamService teamService)
+        {
+            _teamService = teamService;
+        }
+
         [HttpGet]
         public async Task<IActionResult> GetAllTeams()
         {

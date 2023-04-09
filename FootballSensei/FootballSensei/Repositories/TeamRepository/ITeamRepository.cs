@@ -5,5 +5,6 @@ namespace FootballSensei.Repositories.TeamRepository
 {
     public interface ITeamRepository : IGenericRepository<Team>
     {
+        public Task<List<Team>> GetAllWithTeamsAsync();
     }
 }
