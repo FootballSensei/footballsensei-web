@@ -1,5 +1,6 @@
 ﻿import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import styles from './Matches.modules.css';
 
 export class Matches extends Component {
     constructor(props) {
@@ -17,47 +18,45 @@ export class Matches extends Component {
     }
 
     renderTableData() {
-        console.log(this.state.matches);
         return this.state.matches.map((match, index) => {
-            const { id, homeTeamName, awayTeamName, date } = match;
+            const { id, homeTeamName, awayTeamName, date, round } = match;
             return (
-                <><tr key={index}>
+                <tr key={index}>
                     <td>{homeTeamName}</td>
                     <td>{awayTeamName}</td>
                     <td>{date}</td>
+                    <td>{round}</td>
+                    <td><Link className="button" to={`/match/${id}`}>View Match Details</Link></td>
                 </tr>
-                <Link to={`/match/${id}`}>View Match Details</Link></>
-
             );
         });
     }
 
     render() {
         const { loading, matches } = this.state;
-        console.log(matches);
         return (
-            <div>
-                <h1>Matches</h1>
-                <p>This component demonstrates fetching data from the server.</p>
+            <div className="container matches">
+                <h1 className="title">Matches</h1>
+                <p className="subtitle">This component demonstrates fetching data from the server.</p>
                 {loading ? (
                     <p>Loading...</p>
                 ) : matches.length > 0 ? (
-                    <table>
+                    <table className="table">
                         <thead>
                             <tr>
                                 <th>Home Team</th>
                                 <th>Away Team</th>
                                 <th>Date</th>
+                                <th>Round</th>
+                                <th></th>
                             </tr>
                         </thead>
                         <tbody>{this.renderTableData()}</tbody>
                     </table>
-                    
                 ) : (
                     <p>No matches found.</p>
                 )}
             </div>
         );
     }
-
 }

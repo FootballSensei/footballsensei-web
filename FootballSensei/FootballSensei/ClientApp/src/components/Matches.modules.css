@@ -1,0 +1,60 @@
+﻿.matches .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.matches .title {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2d3954;
+}
+
+.matches .subtitle {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #7c8ba3;
+}
+
+.matches .table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+    .matches .table th,
+    .matches .table td {
+        padding: 12px 16px;
+        border-bottom: 1px solid #e6eaf2;
+    }
+
+    .matches .table th {
+        background-color: #f8fafd;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        color: #7c8ba3;
+        font-weight: normal;
+    }
+
+    .matches .table td {
+        font-size: 1.2rem;
+        color: #2d3954;
+    }
+
+.matches .button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #2d3954;
+    color: #fff;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+    .matches .button:hover {
+        background-color: #475569;
+    }

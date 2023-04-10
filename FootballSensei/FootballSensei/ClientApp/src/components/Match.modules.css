@@ -1,0 +1,65 @@
+﻿.match-card {
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.match-details {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.match-score {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 20px;
+    color: #333;
+}
+
+    .match-score span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50%;
+    }
+
+        .match-score span:first-child {
+            text-align: right;
+            padding-right: 10px;
+        }
+
+        .match-score span:last-child {
+            text-align: left;
+            padding-left: 10px;
+        }
+
+.match-date {
+    font-size: 1.2rem;
+    color: #777;
+    margin: 10px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #555;
+}
+
+p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #777;
+}

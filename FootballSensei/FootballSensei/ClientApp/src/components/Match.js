@@ -1,8 +1,10 @@
 ﻿import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import styles from './Match.modules.css';
 
 function Match() {
     const { id } = useParams();
+    const { round } = useParams();
     const [match, setMatch] = useState(null);
     const [loading, setLoading] = useState(true);
 
@@ -15,31 +17,25 @@ function Match() {
         }
 
         fetchMatch();
-    }, [id]);
+    }, [id, round]);
+
+    const formatMatch = (match) => {
+        return `${match.homeTeamName} ${match.homeGoals} - ${match.awayGoals} ${match.awayTeamName}`;
+    }
 
     return (
         <div>
-            <h1>Match {id}</h1>
+            <h1>Superliga - Runda {match?.round}</h1>
             <p>This component demonstrates fetching data from the server.</p>
             {loading ? (
                 <p>Loading...</p>
             ) : match ? (
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Home Team</th>
-                            <th>Away Team</th>
-                            <th>Date</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>{match.homeTeamName}</td>
-                            <td>{match.awayTeamName}</td>
-                            <td>{match.date}</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div className="match-card">
+                    <div className="match-details">
+                        <div className="match-score">{formatMatch(match)}</div>
+                        <div className="match-date">{match.date}</div>
+                    </div>
+                </div>
             ) : (
                 <p>No matches found.</p>
             )}
