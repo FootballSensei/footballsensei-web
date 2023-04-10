@@ -1,4 +1,5 @@
 ﻿import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 export class Matches extends Component {
     constructor(props) {
@@ -10,33 +11,37 @@ export class Matches extends Component {
     }
 
     async componentDidMount() {
-        const response = await fetch('api/Match');
+        const response = await fetch('api/match');
         const data = await response.json();
         this.setState({ matches: data, loading: false });
     }
 
     renderTableData() {
+        console.log(this.state.matches);
         return this.state.matches.map((match, index) => {
-            const { homeTeamName, awayTeamName, date } = match;
+            const { id, homeTeamName, awayTeamName, date } = match;
             return (
-                <tr key={index}>
+                <><tr key={index}>
                     <td>{homeTeamName}</td>
                     <td>{awayTeamName}</td>
                     <td>{date}</td>
                 </tr>
+                <Link to={`/match/${id}`}>View Match Details</Link></>
+
             );
         });
     }
 
     render() {
-        const { loading } = this.state;
+        const { loading, matches } = this.state;
+        console.log(matches);
         return (
             <div>
                 <h1>Matches</h1>
                 <p>This component demonstrates fetching data from the server.</p>
                 {loading ? (
                     <p>Loading...</p>
-                ) : (
+                ) : matches.length > 0 ? (
                     <table>
                         <thead>
                             <tr>
@@ -47,8 +52,12 @@ export class Matches extends Component {
                         </thead>
                         <tbody>{this.renderTableData()}</tbody>
                     </table>
+                    
+                ) : (
+                    <p>No matches found.</p>
                 )}
             </div>
         );
     }
+
 }

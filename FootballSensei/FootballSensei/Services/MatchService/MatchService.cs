@@ -34,5 +34,14 @@ namespace FootballSensei.Services.MatchService
             var matchesDTO = _mapper.Map<List<MatchDTO>>(matches);
             return matchesDTO;
         }
+
+        public async Task<MatchDTO> GetMatchById(Guid id)
+        {
+            
+            var match = await _matchRepository.GetMatchById(id);
+            var matchDTO = _mapper.Map<MatchDTO>(match);
+            return matchDTO;
+            
+        }
     }
 }

@@ -20,7 +20,15 @@ namespace FootballSensei.Controllers
         public async Task<IActionResult> GetAllMatches()
         {
             var matches = await _matchService.GetAllMatches();
+            Console.WriteLine("GetAllMatches called");
             return Ok(matches);
+        }
+
+        [HttpGet ("getMatchById/{id}")]
+        public async Task<IActionResult> GetMatchById(Guid id)
+        {
+            var match = await _matchService.GetMatchById(id);
+            return Ok(match);
         }
 
         [HttpPost]

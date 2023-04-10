@@ -5,5 +5,9 @@ namespace FootballSensei.Repositories.MatchRepository
 {
     public interface IMatchRepository : IGenericRepository<Match>
     {
+        public Task<Match> GetMatchById(Guid id);
     }
+
+    
+
 }

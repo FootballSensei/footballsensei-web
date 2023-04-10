@@ -2,6 +2,7 @@
 {
     public class MatchDTO
     {
+        public Guid Id { get; set; }
         public string HomeTeamName { get; set; }
         public Guid HomeTeamId { get; set; }
         public string AwayTeamName { get; set; }

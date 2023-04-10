@@ -6,5 +6,7 @@ namespace FootballSensei.Services.MatchService
     {
         public Task<List<MatchDTO>> CreateMatch(CreateMatchDTO matchDTO);
         public Task<List<MatchDTO>> GetAllMatches();
+
+        public Task<MatchDTO> GetMatchById(Guid id);
     }
 }
