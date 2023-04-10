@@ -2,7 +2,7 @@ import { Counter } from "./components/Counter";
 import { FetchData } from "./components/FetchData";
 import { Home } from "./components/Home";
 import { Matches } from "./components/Matches";
-import { Match } from "./components/Match";
+import Match from "./components/Match";
 //import { Players } from "./components/Players";
 //import { Teams } from "./components/Teams";
 
@@ -27,7 +27,8 @@ const AppRoutes = [
 
   {
       path: '/match/:id',
-      element: <Match />
+      element: <Match />,
+
   }
   /*
   {
