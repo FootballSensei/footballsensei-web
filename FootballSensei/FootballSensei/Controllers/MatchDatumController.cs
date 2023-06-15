@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Net.Http;
 using System.Threading.Tasks;
+using System.Text.Json;
 
 namespace FootballSensei.Controllers
 {
@@ -36,8 +37,13 @@ namespace FootballSensei.Controllers
             if (response.IsSuccessStatusCode)
             {
                 // Handle successful response
-                var result = await response.Content.ReadAsStringAsync();
-                // Process the result as needed
+                var jsonResult = await response.Content.ReadAsStringAsync();
+
+                var options = new JsonSerializerOptions
+                {
+                    PropertyNameCaseInsensitive = true
+                };
+                var result = JsonSerializer.Deserialize<object>(jsonResult, options);
                 return Ok(result);
             }
             else

@@ -15,8 +15,12 @@ function Match() {
             const data = await response.json();
             setMatch(data);
 
-            const response2 = await fetch(`api/matchdatum/prediction/${homeTeam}/${awayTeam}`);
+            const response2 = await fetch(`api/matchdatum/prediction/${homeTeam}/${awayTeam}`, {
+                method: 'POST'
+            });
+            console.log(response2);
             const data2 = await response2.json();
+            console.log(data2);
             setPrediction(data2);
             setLoading(false);
         }
@@ -59,7 +63,7 @@ function Match() {
                             <div className="match-formations">{formatFormations(match.homeLineup)}</div>
                             <br></br>
                             <div className="match-formations">{formatFormations(match.awayLineup)}</div>
-                            <div className="match-prediction">{prediction}</div>
+                            <div className="match-prediction">{prediction.score}</div>
                     </div>
                 </div>
             ) : (

@@ -9,7 +9,9 @@ const context = [
     "/api/match",
     "/api/match/getMatchById/:id",
     "/api/lineupdatum",
-    "/api/lineupdatum/:homeTeam/:awayTeam"
+    "/api/lineupdatum/:homeTeam/:awayTeam",
+    "/api/matchdatum/prediction",
+    "/api/matchdatum/prediction/:homeTeam/:awayTeam"
 ];
 
 const onError = (err, req, resp, target) => {

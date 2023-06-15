@@ -28,7 +28,7 @@
     font-size: 3rem;
     font-weight: bold;
     margin: 20px;
-    color: #333;
+    color: white;
 }
 
     .match-score span {
@@ -50,7 +50,7 @@
 
 .match-date {
     font-size: 1.2rem;
-    color: #777;
+    color: white;
     margin: 10px;
 }
 
@@ -68,3 +68,10 @@ p {
     color: #777;
 }
 
+.match-formations {
+    color: white;
+}
+
+.match-prediction {
+    color: white;
+}
