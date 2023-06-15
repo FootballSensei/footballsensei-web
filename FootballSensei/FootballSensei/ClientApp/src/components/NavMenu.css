@@ -1,18 +1,47 @@
-﻿a.navbar-brand {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
+﻿header {
+    background-color: #0047AB;
 }
 
-html {
-  font-size: 14px;
-}
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+.navbar {
+    background-color: #0047AB;
+    padding: 10px 20px;
 }
 
-.box-shadow {
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+.navbar-brand {
+    color: #FF8C00;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
+
+.navbar-toggler {
+    border-color: #FF8C00;
+}
+
+.navbar-toggler-icon {
+    background-color: #FF8C00;
+}
+
+.collapse.navbar-collapse {
+    justify-content: flex-end;
+}
+
+.navbar-nav {
+    align-items: center;
+}
+
+.nav-link {
+    color: #FFFFFF;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    margin-right: 10px;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+    .nav-link:hover {
+        color: #FF8C00;
+        text-decoration: none;
+    }
+
+

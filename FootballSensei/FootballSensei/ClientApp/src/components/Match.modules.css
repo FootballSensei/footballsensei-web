@@ -1,5 +1,9 @@
 ﻿.match-card {
-    background-color: #f7f7f7;
+    background-image: url("https://images.unsplash.com/photo-1556056504-5c7696c4c28d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=676&q=80");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the transparency by changing the last value */
     border-radius: 10px;
     box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
     padding: 20px;
@@ -63,3 +67,4 @@ p {
     text-align: center;
     color: #777;
 }
+
