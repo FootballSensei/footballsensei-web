@@ -7,7 +7,7 @@ namespace FootballSensei.Repositories.TeamRepository
 {
     public class TeamRepository : GenericRepository<Team> ,ITeamRepository
     {
-        public TeamRepository(ProjectContext context) : base(context) { }
+        public TeamRepository(FootballsenseiContext context) : base(context) { }
 
         public async Task<List<Team>> GetAllWithTeamsAsync()
         {

@@ -1,4 +1,5 @@
 ﻿using FootballSensei.Data;
+using FootballSensei.Models;
 using FootballSensei.Models.Base;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
@@ -7,10 +8,10 @@ namespace FootballSensei.Repositories.GenericRepository
 {
     public class GenericRepository<TEntity> : IGenericRepository<TEntity> where TEntity : class
     {
-        protected readonly ProjectContext _context;
+        protected readonly FootballsenseiContext _context;
         protected readonly DbSet<TEntity> _table;
 
-        public GenericRepository(ProjectContext context)
+        public GenericRepository(FootballsenseiContext context)
         {
             _context = context;
             _table = _context.Set<TEntity>();

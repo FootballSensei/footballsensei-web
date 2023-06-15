@@ -26,10 +26,15 @@ const AppRoutes = [
     },
 
   {
-      path: '/match/:id',
+      path: '/match/:homeTeam/:awayTeam',
       element: <Match />,
 
-  }
+    },
+    {
+        path: '/prediction/:homeTeam/:awayTeam',
+        element: <Match />,
+
+    }
   /*
   {
       path: '/teams',

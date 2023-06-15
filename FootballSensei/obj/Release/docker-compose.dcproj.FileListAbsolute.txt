@@ -21,3 +21,26 @@ D:\CURSURI UNIBUC\ANUL 2\Semestrul 2\MDS\footballsensei-web\FootballSensei\bin\R
 D:\CURSURI UNIBUC\ANUL 2\Semestrul 2\MDS\footballsensei-web\FootballSensei\obj\Release\docker-compose.dcproj.AssemblyReference.cache
 D:\CURSURI UNIBUC\ANUL 2\Semestrul 2\MDS\footballsensei-web\FootballSensei\obj\Release\docker-compose.dcproj.CoreCompileInputs.cache
 D:\CURSURI UNIBUC\ANUL 2\Semestrul 2\MDS\footballsensei-web\FootballSensei\obj\Release\docker-compose.dcproj.CopyComplete
+C:\Users\valus\Desktop\Uni\Anul 2\Semestrul 2\MDS\Proiect\footballsensei-web\FootballSensei\bin\Release\FootballSensei.deps.json
+C:\Users\valus\Desktop\Uni\Anul 2\Semestrul 2\MDS\Proiect\footballsensei-web\FootballSensei\bin\Release\FootballSensei.runtimeconfig.json
+C:\Users\valus\Desktop\Uni\Anul 2\Semestrul 2\MDS\Proiect\footballsensei-web\FootballSensei\bin\Release\spa.proxy.json
+C:\Users\valus\Desktop\Uni\Anul 2\Semestrul 2\MDS\Proiect\footballsensei-web\FootballSensei\bin\Release\appsettings.Development.json
+C:\Users\valus\Desktop\Uni\Anul 2\Semestrul 2\MDS\Proiect\footballsensei-web\FootballSensei\bin\Release\appsettings.json
+C:\Users\valus\Desktop\Uni\Anul 2\Semestrul 2\MDS\Proiect\footballsensei-web\FootballSensei\bin\Release\FootballSensei.exe
+C:\Users\valus\Desktop\Uni\Anul 2\Semestrul 2\MDS\Proiect\footballsensei-web\FootballSensei\bin\Release\FootballSensei.dll
+C:\Users\valus\Desktop\Uni\Anul 2\Semestrul 2\MDS\Proiect\footballsensei-web\FootballSensei\bin\Release\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\valus\Desktop\Uni\Anul 2\Semestrul 2\MDS\Proiect\footballsensei-web\FootballSensei\bin\Release\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\valus\Desktop\Uni\Anul 2\Semestrul 2\MDS\Proiect\footballsensei-web\FootballSensei\bin\Release\Microsoft.EntityFrameworkCore.dll
+C:\Users\valus\Desktop\Uni\Anul 2\Semestrul 2\MDS\Proiect\footballsensei-web\FootballSensei\bin\Release\AutoMapper.dll
+C:\Users\valus\Desktop\Uni\Anul 2\Semestrul 2\MDS\Proiect\footballsensei-web\FootballSensei\bin\Release\Microsoft.Data.SqlClient.dll
+C:\Users\valus\Desktop\Uni\Anul 2\Semestrul 2\MDS\Proiect\footballsensei-web\FootballSensei\bin\Release\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\valus\Desktop\Uni\Anul 2\Semestrul 2\MDS\Proiect\footballsensei-web\FootballSensei\bin\Release\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\valus\Desktop\Uni\Anul 2\Semestrul 2\MDS\Proiect\footballsensei-web\FootballSensei\bin\Release\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\valus\Desktop\Uni\Anul 2\Semestrul 2\MDS\Proiect\footballsensei-web\FootballSensei\bin\Release\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\valus\Desktop\Uni\Anul 2\Semestrul 2\MDS\Proiect\footballsensei-web\FootballSensei\bin\Release\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\valus\Desktop\Uni\Anul 2\Semestrul 2\MDS\Proiect\footballsensei-web\FootballSensei\bin\Release\Microsoft.OpenApi.dll
+C:\Users\valus\Desktop\Uni\Anul 2\Semestrul 2\MDS\Proiect\footballsensei-web\FootballSensei\bin\Release\Microsoft.Identity.Client.dll
+C:\Users\valus\Desktop\Uni\Anul 2\Semestrul 2\MDS\Proiect\footballsensei-web\FootballSensei\bin\Release\FootballSensei.pdb
+C:\Users\valus\Desktop\Uni\Anul 2\Semestrul 2\MDS\Proiect\footballsensei-web\FootballSensei\obj\Release\docker-compose.dcproj.AssemblyReference.cache
+C:\Users\valus\Desktop\Uni\Anul 2\Semestrul 2\MDS\Proiect\footballsensei-web\FootballSensei\obj\Release\docker-compose.dcproj.CoreCompileInputs.cache
+C:\Users\valus\Desktop\Uni\Anul 2\Semestrul 2\MDS\Proiect\footballsensei-web\FootballSensei\obj\Release\docker-compose.dcproj.CopyComplete

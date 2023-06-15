@@ -7,7 +7,7 @@ namespace FootballSensei.Repositories.MatchRepository
 {
     public class MatchRepository : GenericRepository<Match>, IMatchRepository
     {
-        public MatchRepository(ProjectContext context) : base(context) { }
+        public MatchRepository(FootballsenseiContext context) : base(context) { }
 
         public async Task<Match> GetMatchById(Guid id)
         {

@@ -1,10 +1,9 @@
 ﻿
-
-
-
+using FootballSensei.Repositories.LineupDatumRepository;
 using FootballSensei.Repositories.MatchRepository;
 using FootballSensei.Repositories.PlayerRepository;
 using FootballSensei.Repositories.TeamRepository;
+using FootballSensei.Services.LineupDatumService;
 using FootballSensei.Services.MatchService;
 using FootballSensei.Services.PlayerService;
 using FootballSensei.Services.TeamService;
@@ -19,6 +18,8 @@ namespace FootballSensei.Helperss.Extensions
             services.AddTransient<IPlayerRepository, PlayerRepository>();
             services.AddTransient<ITeamRepository, TeamRepository>();
             services.AddTransient<IMatchRepository, MatchRepository>();
+            services.AddTransient<ILineupDatumRepository, LineupDatumRepository>();
+         
 
 
             return services;
@@ -30,6 +31,7 @@ namespace FootballSensei.Helperss.Extensions
             services.AddTransient<IMatchService, MatchService>();
             services.AddTransient<ITeamService, TeamService>();
             services.AddTransient<IPlayerService, PlayerService>();
+            services.AddTransient<ILineupDatumService, LineupDatumService>();
 
 
             return services;

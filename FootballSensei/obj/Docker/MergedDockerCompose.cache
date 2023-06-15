@@ -1,8 +1,8 @@
-name: dockercompose12240678116628533443
+name: dockercompose12947414475697897004
 services:
   footballsensei:
     build:
-      context: D:\CURSURI UNIBUC\ANUL 2\Semestrul 2\MDS\footballsensei-web\FootballSensei
+      context: C:\Users\valus\Desktop\Uni\Anul 2\Semestrul 2\MDS\Proiect\footballsensei-web\FootballSensei
       dockerfile: FootballSensei/Dockerfile
     environment:
       ASPNETCORE_ENVIRONMENT: Development
@@ -19,17 +19,29 @@ services:
       protocol: tcp
     volumes:
     - type: bind
-      source: C:\Users\stoic\AppData\Roaming/Microsoft/UserSecrets
+      source: C:\Users\valus\AppData\Roaming/Microsoft/UserSecrets
       target: /root/.microsoft/usersecrets
       read_only: true
       bind:
         create_host_path: true
     - type: bind
-      source: C:\Users\stoic\AppData\Roaming/ASP.NET/Https
+      source: C:\Users\valus\AppData\Roaming/ASP.NET/Https
       target: /root/.aspnet/https
       read_only: true
       bind:
         create_host_path: true
+  sqldb:
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: Dinamo1948
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    networks:
+      default: null
+    ports:
+    - mode: ingress
+      target: 1433
+      published: "1440"
+      protocol: tcp
 networks:
   default:
-    name: dockercompose12240678116628533443_default
+    name: dockercompose12947414475697897004_default

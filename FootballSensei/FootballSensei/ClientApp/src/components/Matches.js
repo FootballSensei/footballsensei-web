@@ -12,32 +12,41 @@ export class Matches extends Component {
     }
 
     async componentDidMount() {
-        const response = await fetch('api/match');
+        const response = await fetch('api/lineupdatum');
         const data = await response.json();
         this.setState({ matches: data, loading: false });
     }
 
     renderTableData() {
-        return this.state.matches.map((match, index) => {
-            const { id, homeTeamName, awayTeamName, date, round } = match;
+        const sortedMatches = this.state.matches.sort((a, b) => {
+            // Convert date strings to Date objects for comparison
+            const dateA = new Date(a.date);
+            const dateB = new Date(b.date);
+
+            // Compare the date objects
+            return dateA - dateB;
+        });
+
+        return sortedMatches.map((match, index) => {
+            const { date, homeTeam, awayTeam, homeLineup, awayLineup, homeSentiment, awaySentiment,
+                homePositiveScore, homeNegativeScore, awayPositiveScore, awayNegativeScore } = match;
             return (
                 <tr key={index}>
-                    <td>{homeTeamName}</td>
-                    <td>{awayTeamName}</td>
+                    <td>{homeTeam}</td>
+                    <td>{awayTeam}</td>
                     <td>{date}</td>
-                    <td>{round}</td>
-                    <td><Link className="button" to={`/match/${id}`}>View Match Details</Link></td>
+                    <td><Link className="button" to={`/match/${homeTeam}/${awayTeam}`}>View Match Details</Link></td>
                 </tr>
             );
         });
     }
+
 
     render() {
         const { loading, matches } = this.state;
         return (
             <div className="container matches">
                 <h1 className="title">Matches</h1>
-                <p className="subtitle">This component demonstrates fetching data from the server.</p>
                 {loading ? (
                     <p>Loading...</p>
                 ) : matches.length > 0 ? (
@@ -47,7 +56,6 @@ export class Matches extends Component {
                                 <th>Home Team</th>
                                 <th>Away Team</th>
                                 <th>Date</th>
-                                <th>Round</th>
                                 <th></th>
                             </tr>
                         </thead>

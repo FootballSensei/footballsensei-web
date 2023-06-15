@@ -6,7 +6,7 @@ namespace FootballSensei.Repositories.PlayerRepository
 {
     public class PlayerRepository : GenericRepository<Player> ,IPlayerRepository
     {
-        public PlayerRepository(ProjectContext context) : base(context){}
+        public PlayerRepository(FootballsenseiContext context) : base(context){}
 
 
 

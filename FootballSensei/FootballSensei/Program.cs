@@ -1,5 +1,6 @@
 using FootballSensei.Data;
 using FootballSensei.Helperss.Extensions;
+using FootballSensei.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 
@@ -9,7 +10,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddControllersWithViews();
-builder.Services.AddDbContext<ProjectContext>(options =>
+builder.Services.AddDbContext<FootballsenseiContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 builder.Services.AddSwaggerGen(c =>
