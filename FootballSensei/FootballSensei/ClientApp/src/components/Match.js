@@ -55,7 +55,7 @@ function Match() {
                 <div className="match-card">
                     <div className="match-details">
                         <div className="match-score">{formatMatch(match)}</div>
-                            <div className="match-date">{match.date}</div>
+                            <div className="match-date">{match.date.replace("T00:00:00", "").replace("-", "/").replace("-", "/")}</div>
                             <div className="match-formations">{formatFormations(match.homeLineup)}</div>
                             <br></br>
                             <div className="match-formations">{formatFormations(match.awayLineup)}</div>

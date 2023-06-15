@@ -34,7 +34,7 @@ export class Matches extends Component {
                 <tr key={index}>
                     <td>{homeTeam}</td>
                     <td>{awayTeam}</td>
-                    <td>{date}</td>
+                    <td>{date.replace("T00:00:00", "").replace("-", "/").replace("-", "/")}</td>
                     <td><Link className="button" to={`/match/${homeTeam}/${awayTeam}`}>View Match Details</Link></td>
                 </tr>
             );
