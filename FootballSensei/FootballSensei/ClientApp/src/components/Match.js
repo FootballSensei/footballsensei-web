@@ -29,27 +29,59 @@ function Match() {
     }, [homeTeam, awayTeam]);
 
     const formatMatch = (match) => {
-        return `${match.homeTeam} ${match.homeSentiment} - ${match.awaySentiment} ${match.awayTeam}`;
+        // return `${match.homeTeam} ${match.homeSentiment} - ${match.awaySentiment} ${match.awayTeam}`;
+        return `${match.homeTeam} - ${match.awayTeam}`;
+    }
+
+    const formatSentiment = (match) => {
+        // return the 2 sentiments on different lines
+        return `${match.homeTeam} overall sentiment score: ${match.homeSentiment} \n ${match.awayTeam} overall sentiment score: ${match.awaySentiment}`;
+    }
+
+    const formatStrongestSentiment = (match) => {
+        // return the strongest sentiment
+        // make 4 variables for home_positive_score, home_negative_score, away_positive_score, away_negative_score
+        // take the greatest of the 4 variables
+        // return something like 'StrongestSentiment: TheNameOfTheTeam with a score of TheScore'
+        
+        var home_positive_score = match.homePositiveScore;
+        var home_negative_score = match.homeNegativeScore;
+        var away_positive_score = match.awayPositiveScore;
+        var away_negative_score = match.awayNegativeScore;
+
+        //If all 4 scores are 0, return "No sentiment detected"
+
+        if (home_positive_score == 0 && home_negative_score == 0 && away_positive_score == 0 && away_negative_score == 0) {
+            return "No sentiment detected";
+        }
+
+        //Found the maximum score
+        var max_score = Math.max(home_positive_score, home_negative_score, away_positive_score, away_negative_score);
+        
+        //If the max_score is 0, then it means that surely there is a negative score, so return the team with the lowest negative score
+        if (max_score == 0) {
+            if (home_negative_score < away_negative_score) {
+                return `${match.homeTeam} with a negative score of ${home_negative_score}`;
+            }
+            else {
+                return `${match.awayTeam} with a negative score of ${away_negative_score}`;
+            }
+        }
+        else{
+            //If the max_score is not 0, then return the team with the highest score
+            if (home_positive_score > away_positive_score) {
+                return `${match.homeTeam} with a positive score of ${home_positive_score}`;
+            }
+            else {
+                return `${match.awayTeam} with a positive score of ${away_positive_score}`;
+            }
+        }
     }
 
     const formatFormations = (lineup) => {
-        let homeLineupFormatted = '';
-        for (let i = 0; i < lineup.length; i++) {
-            if (lineup[i] != '[' || lineup[i] != ']') {
-                if (lineup[i] == ',')
-                    homeLineupFormatted += ', ';
-                else
-                    homeLineupFormatted += lineup[i];
-            }
-                
-        }
-
-        
-
-        return `${homeLineupFormatted.replace(/"/g, '').replace("[", '').replace("]", '')}`;
+        return lineup.replace(/[\[\]"']/g, '').split(", ");
     };
-
-
+    
     return (
         <div>
             <h1>Premier League</h1>
@@ -57,13 +89,34 @@ function Match() {
                 <p>Loading...</p>
             ) : match ? (
                 <div className="match-card">
+                    <div className="match-score">{formatMatch(match)}</div>
+                    <div className="match-date">{match.date.replace("T00:00:00", "").replace("-", "/").replace("-", "/")}</div>
+                    <div className="match-sentiment">{formatSentiment(match)}</div>
+                    <div className="match-strongest-sentiment">{formatStrongestSentiment(match)}</div>
                     <div className="match-details">
-                        <div className="match-score">{formatMatch(match)}</div>
-                            <div className="match-date">{match.date.replace("T00:00:00", "").replace("-", "/").replace("-", "/")}</div>
-                            <div className="match-formations">{formatFormations(match.homeLineup)}</div>
-                            <br></br>
-                            <div className="match-formations">{formatFormations(match.awayLineup)}</div>
-                            <div className="match-prediction">{prediction.score}</div>
+                        <div className="team-section">
+                            <div className="team-name-sentiment">
+                                {/* <span className="team-name">{match.homeTeam}</span> */}
+                                <span className="team-sentiment">{match.homeSentiment}</span>
+                            </div>
+                            <div className="team-players">
+                                {formatFormations(match.homeLineup).map((player, index) => (
+                                    <div className={`player position-${index}`}>{player}</div>
+                                ))}
+                            </div>
+                        </div>
+                        <div className="team-section">
+                            <div className="team-name-sentiment">
+                                <span className="team-name">{match.awayTeam}</span>
+                                {/* <span className="team-sentiment">{match.awaySentiment}</span> */}
+                            </div>
+                            <div className="team-players">
+                                {formatFormations(match.awayLineup).map((player, index) => (
+                                    <div className={`player position-${index}`}>{player}</div>
+                                ))}
+                            </div>
+                        </div>
+                        {/* <div className="match-prediction">{prediction.score}</div> */}
                     </div>
                 </div>
             ) : (
