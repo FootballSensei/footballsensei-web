@@ -7,9 +7,9 @@
     justify-content: center;
     flex-direction: column;
     margin: 20px;
-  }
-  
-  .match-details {
+}
+
+.match-details {
     background-image: url("https://images.unsplash.com/photo-1556056504-5c7696c4c28d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=676&q=80");
     background-repeat: no-repeat;
     background-size: cover;
@@ -19,9 +19,9 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-  }
-  
-  .match-score {
+}
+
+.match-score {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -29,102 +29,113 @@
     font-weight: bold;
     margin: 20px;
     color: black;
-  }
-  
-  .match-score span {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 50%;
-  }
-  
-  .match-score span:first-child {
-    text-align: right;
-    padding-right: 10px;
-  }
-  
-  .match-score span:last-child {
-    text-align: left;
-    padding-left: 10px;
-  }
-  
-  .match-date {
+}
+
+    .match-score span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50%;
+    }
+
+        .match-score span:first-child {
+            text-align: right;
+            padding-right: 10px;
+        }
+
+        .match-score span:last-child {
+            text-align: left;
+            padding-left: 10px;
+        }
+
+.match-date {
     font-size: 1.2rem;
     color: black;
     margin: 10px;
-  }
-  
-  h1 {
+}
+
+h1 {
     font-size: 2.5rem;
     margin-bottom: 20px;
     text-align: center;
     color: #555;
-  }
-  
-  p {
+}
+
+p {
     font-size: 1.2rem;
     margin-bottom: 20px;
     text-align: center;
     color: #777;
-  }
-  
-  .match-formations {
+}
+
+.match-formations {
     display: flex;
     align-items: center;
     justify-content: space-between;
     color: white;
     font-size: 1rem;
     margin: 10px;
-  }
-  
-  .match-prediction {
+}
+
+.match-prediction {
     color: white;
-  }
-  
-  .team-section {
+}
+
+.team-section {
     width: 40%;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 20px;
-  }
-  
-  .team-name-sentiment {
+}
+
+.team-name-sentiment {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 10px;
     color: white;
     font-size: 1.5rem;
-  }
-  
-  .team-name {
+}
+
+.team-name {
     font-weight: bold;
-  }
-  
-  .team-players {
+}
+
+.team-players {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
-  }
-  
-  .player {
-    /* Stilizează fiecare jucător după cum dorești */
+}
+
+.player {
+    /* Stylize each player as desired */
     color: white;
     font-size: 1rem;
     text-align: center;
-  }
-  
-  .match-sentiment{
+}
+
+.match-sentiment {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 10px;
     color: black;
     font-size: 1.5rem;
-  }
+}
 
-  .match-strongest-sentiment{
+.match-strongest-sentiment {
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0,  0,  0,  0.5);
+}
+
+.winner {
     color: green;
-  }
+}
+
+.loser {
+    color: red;
+}
